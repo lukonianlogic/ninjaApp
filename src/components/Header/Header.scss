@@ -1,0 +1,79 @@
+$dark-grey: #2d3748;
+
+.header {
+  background-color: #4A5568;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  z-index: 10; // Ensures the header is above other content
+
+  .header-image {
+    width: 80px; // Adjust the size as needed
+    height: 80px; // Keep the aspect ratio for a circle
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px; // Center the image
+    background-color: #ffffff; // Change if necessary
+    // Additional styling
+  }
+
+  .nav {
+    align-items: center;
+    display: flex;
+    gap: 20px; // Add space between items
+    position: absolute;
+    left: 0; // Position the nav to the left
+    top: 0; // Adjust top as needed
+    padding: 10px; // Add padding to the nav
+    z-index: 15; // Ensure the nav is above other content
+  }
+  .dropdown {
+    align-items: center;
+    position: absolute;
+    right: 0; // Position the dropdown to the right
+    top: 60px; // Adjust top as needed
+    display: flex;
+    flex-direction: column;
+    gap: 10px; // Add space between items
+    padding: 10px; // Add padding to the dropdown
+    border-radius: 5px; // Add rounded corners
+    z-index: 15; // Ensure the dropdown is above other content
+  }
+
+  .dropdown-menu {
+    align-items: center;
+    background-color: #3182CE;
+    margin: 20px;
+    padding: 20px;
+    position: absolute;
+    justify-content: right;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.dropdown-item {
+  color: #ffffff; // Make the text color white
+  font-size: 24px; // Set the font size to 24px
+  margin: 10px 0; // Add margin to top and bottom
+  text-decoration: none; // Remove underline from links
+
+  &:hover {
+    background-color: lighten($dark-grey, 10%); // Slightly lighter on hover for feedback
+  }
+}
+  .hamburger-icon {
+    align-items: center;
+    position: absolute;
+    right: 10px; // Position the hamburger icon to the right
+    top: 10px; // Adjust top as needed
+    cursor: pointer;
+    z-index: 20; // Ensures the icon is above the dropdown
+    // Add more styling as needed
+  }
+
+
+  // Continue with .text-wrapper, .div, .courses styles as before
+}
